@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2ih44b2xcht2"]
 
-[ext_resource type="Texture2D" uid="uid://cqecc12bq2ux" path="res://icon.svg" id="1_e05er"]
+[ext_resource type="Texture2D" uid="uid://j5ud2de4vv68" path="res://src/in-game/explosion/particles/untitled-pixel-art@4x (4).png" id="1_sxg17"]
 [ext_resource type="Script" uid="uid://dbi623r54pvqa" path="res://src/in-game/explosion/explode_particles.gd" id="2_sxg17"]
 
 [sub_resource type="Curve" id="Curve_e05er"]
@@ -13,7 +13,7 @@ colors = PackedColorArray(1, 0, 0, 1, 1, 0.9666667, 0, 1)
 [node name="ExplodeParticles" type="CPUParticles2D" unique_id=516408362]
 emitting = false
 amount = 48
-texture = ExtResource("1_e05er")
+texture = ExtResource("1_sxg17")
 lifetime = 4.3999999999999995
 one_shot = true
 explosiveness = 0.9

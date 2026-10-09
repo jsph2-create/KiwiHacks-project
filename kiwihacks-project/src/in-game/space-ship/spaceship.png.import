@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4ooakyh8teex"
-path="res://.godot/imported/Spaceship.png-9d9579c937b4d49b9d7e98297f759488.ctex"
+path="res://.godot/imported/spaceship.png-a437a11374fcb07f640c0c6fa492522c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/in-game/space-ship/Spaceship.png"
-dest_files=["res://.godot/imported/Spaceship.png-9d9579c937b4d49b9d7e98297f759488.ctex"]
+source_file="res://src/in-game/space-ship/spaceship.png"
+dest_files=["res://.godot/imported/spaceship.png-a437a11374fcb07f640c0c6fa492522c.ctex"]
 
 [params]
 
