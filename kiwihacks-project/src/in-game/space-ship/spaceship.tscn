@@ -58,9 +58,10 @@ _data = {
 &"off": SubResource("Animation_8ih6m")
 }
 
-[node name="SpaceShip" type="CharacterBody2D" unique_id=1008286286 node_paths=PackedStringArray("ani")]
+[node name="SpaceShip" type="CharacterBody2D" unique_id=1008286286 node_paths=PackedStringArray("laser_gun", "ani")]
 motion_mode = 1
 script = ExtResource("1_n2fdh")
+laser_gun = NodePath("LaserGun")
 ani = NodePath("Spaceship/AnimationPlayer")
 
 [node name="Spaceship" type="Sprite2D" parent="." unique_id=859789837]

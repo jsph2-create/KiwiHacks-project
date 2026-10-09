@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var type = "ship"
-
+@export var laser_gun : Node2D
 
 @export_category("ship stats")
 @export var default_speed_max := 500.0
@@ -14,9 +14,18 @@ var speed_max = default_speed_max
 var vec_direction
 var last_location
 var matter := 0
-var fuel
+var fuel = 100
+
+func detect_fire() -> void:
+	if Input.is_action_just_pressed("fire"):
+		laser_gun.fire()
+		
+		
+
 
 func _physics_process(delta: float) -> void:
+	detect_fire()
+	
 	last_location = global_position
 	#basic player movement
 	vec_direction = Input.get_vector("leftwards", "rightwards", "forwards", "backwards")
