@@ -1,20 +1,23 @@
 [gd_scene format=3 uid="uid://c1x44g2wtxkis"]
 
 [ext_resource type="Script" uid="uid://b2ttv6d2isxnl" path="res://src/in-game/space-ship/space_ship.gd" id="1_6nhxk"]
+[ext_resource type="Texture2D" uid="uid://c4ooakyh8teex" path="res://src/in-game/space-ship/spaceship.png" id="2_1x36f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1x36f"]
+size = Vector2(55, 59)
 
 [node name="SpaceShip" type="CharacterBody2D" unique_id=1008286286]
 motion_mode = 1
 script = ExtResource("1_6nhxk")
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1100132364]
-position = Vector2(-16, 0)
-rotation = 1.5707964
-color = Color(0, 1, 1, 1)
-polygon = PackedVector2Array(0, -56, -32, 0, 0, 16, 32, 0)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1178460808]
-position = Vector2(-16, 0)
-rotation = 1.5707964
-polygon = PackedVector2Array(0, -56, -32, 0, 0, 16, 32, 0, 0, -56)
+[node name="Spaceship" type="Sprite2D" parent="." unique_id=859789837]
+texture_filter = 1
+rotation = 4.712389
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_1x36f")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1592434852]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1851228326]
+position = Vector2(-3.5, -0.5)
+shape = SubResource("RectangleShape2D_1x36f")
