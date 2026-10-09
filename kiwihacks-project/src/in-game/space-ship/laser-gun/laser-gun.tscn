@@ -2,14 +2,23 @@
 
 [ext_resource type="Script" uid="uid://wmmhpe1h68e4" path="res://src/in-game/space-ship/laser-gun/laser_gun.gd" id="1_pivdn"]
 [ext_resource type="Texture2D" uid="uid://ckyqw33aykq7a" path="res://src/in-game/space-ship/laser-gun/laser-gun.png" id="1_xyh2p"]
+[ext_resource type="Texture2D" uid="uid://cw37ftggekl72" path="res://src/in-game/space-ship/laser-gun/lazer-beam.png" id="3_3chm2"]
 
-[node name="LaserGun" type="Node2D" unique_id=1076174354]
+[node name="LaserGun" type="Node2D" unique_id=1076174354 node_paths=PackedStringArray("raycast")]
 script = ExtResource("1_pivdn")
+raycast = NodePath("RayCast2D")
 
 [node name="LaserGun" type="Sprite2D" parent="." unique_id=2004306345]
 rotation = 1.5707964
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_xyh2p")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=52121496]
 target_position = Vector2(1000, 0)
+
+[node name="LazerBeam" type="Sprite2D" parent="." unique_id=1816498925]
+position = Vector2(166, 4.5474735e-13)
+rotation = -1.5707964
+scale = Vector2(0.2514648, 0.2514648)
+texture = ExtResource("3_3chm2")
+region_rect = Rect2(0, 0, 500, 5000)

@@ -66,7 +66,7 @@ ani = NodePath("Spaceship/AnimationPlayer")
 [node name="Spaceship" type="Sprite2D" parent="." unique_id=859789837]
 texture_filter = 1
 rotation = 4.712389
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_n2fdh")
 region_enabled = true
 region_rect = Rect2(0, 0, 256, 256)
@@ -78,7 +78,8 @@ libraries/ = SubResource("AnimationLibrary_y5l04")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1276052295]
 visible = false
+scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(32, -1, 22, -30, -26, -30, -32, -2, -32, 1, -24, 29, 22, 29, 32, 0)
 
 [node name="LaserGun" parent="." unique_id=1076174354 instance=ExtResource("3_diuti")]
-position = Vector2(3, 9)
+position = Vector2(5, 18)
