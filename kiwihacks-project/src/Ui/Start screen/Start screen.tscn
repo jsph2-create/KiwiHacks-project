@@ -29,7 +29,6 @@ layout_mode = 2
 [node name="Play" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer" unique_id=1240074752]
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
-mouse_filter = 2
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
 script = ExtResource("2_1lfr0")
