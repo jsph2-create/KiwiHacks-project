@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c4iq43jtkyvi"]
 
-[sub_resource type="TileSet" id="TileSet_gdgm7"]
-
-[node name="TileMapLayer" type="TileMapLayer" unique_id=1647427155]
-position = Vector2(1, 0)
-tile_set = SubResource("TileSet_gdgm7")
+[node name="ColorRect" type="ColorRect" unique_id=1622750360]
+offset_right = 1961.0
+offset_bottom = 1100.0
+color = Color(0.0063559995, 1.2032688e-08, 0.15368462, 1)
