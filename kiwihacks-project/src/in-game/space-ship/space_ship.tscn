@@ -35,15 +35,32 @@ tracks/0/keys = {
 "values": [Rect2(0, 0, 256, 256), Rect2(256, 0, 256, 256), Rect2(512, 0, 256, 256), Rect2(768, 0, 256, 256)]
 }
 
+[sub_resource type="Animation" id="Animation_8ih6m"]
+resource_name = "off"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 256, 256, 256)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y5l04"]
 _data = {
 &"RESET": SubResource("Animation_y5l04"),
-&"move": SubResource("Animation_1x36f")
+&"move": SubResource("Animation_1x36f"),
+&"off": SubResource("Animation_8ih6m")
 }
 
-[node name="SpaceShip" type="CharacterBody2D" unique_id=1008286286]
+[node name="SpaceShip" type="CharacterBody2D" unique_id=1008286286 node_paths=PackedStringArray("ani")]
 motion_mode = 1
 script = ExtResource("1_6nhxk")
+ani = NodePath("Spaceship/AnimationPlayer")
 
 [node name="Spaceship" type="Sprite2D" parent="." unique_id=859789837]
 texture_filter = 1
@@ -55,7 +72,6 @@ region_rect = Rect2(0, 0, 256, 256)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Spaceship" unique_id=1676105474]
 libraries/ = SubResource("AnimationLibrary_y5l04")
-autoplay = &"move"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1592434852]
 
