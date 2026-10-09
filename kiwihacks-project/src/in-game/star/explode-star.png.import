@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lvmcyfp0coc0"
-path="res://.godot/imported/untitled-pixel-art@4x (2).png-1fc3f3d3cb5fdf80b2be66677ea21574.ctex"
+uid="uid://dcpxhp2gowyau"
+path="res://.godot/imported/explode-star.png-b9dc31a35aa54a7fd3e7292a042846c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/in-game/space/untitled-pixel-art@4x (2).png"
-dest_files=["res://.godot/imported/untitled-pixel-art@4x (2).png-1fc3f3d3cb5fdf80b2be66677ea21574.ctex"]
+source_file="res://src/in-game/star/explode-star.png"
+dest_files=["res://.godot/imported/explode-star.png-b9dc31a35aa54a7fd3e7292a042846c8.ctex"]
 
 [params]
 

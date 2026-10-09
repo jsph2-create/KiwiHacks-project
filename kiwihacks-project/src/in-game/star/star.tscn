@@ -1,14 +1,31 @@
 [gd_scene format=3 uid="uid://dau76aukoc42f"]
 
 [ext_resource type="Script" uid="uid://nakwx517jdhs" path="res://src/in-game/star/star.gd" id="1_xft7j"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://eo24ofx5s80h" path="res://src/in-game/star/untitled-pixel-art@4x (3).png" id="2_citqq"]
 [ext_resource type="Texture2D" uid="uid://g1v8a7xsbe2d" path="res://src/in-game/star/untitled-pixel-art@4x (8).png" id="3_vvwei"]
 [ext_resource type="Texture2D" uid="uid://dgef3y16lqu7" path="res://src/in-game/star/untitled-pixel-art@4x (9).png" id="4_umwbs"]
 [ext_resource type="Texture2D" uid="uid://bv2i6dav0hphi" path="res://src/in-game/star/untitled-pixel-art@4x (10).png" id="5_7vje4"]
+=======
+[ext_resource type="Texture2D" uid="uid://dcpxhp2gowyau" path="res://src/in-game/star/explode-star.png" id="2_y66hr"]
+>>>>>>> Stashed changes
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8t0bl"]
-radius = 112.28535
+[sub_resource type="Animation" id="Animation_mvros"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ExplodeStar:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 256, 256)]
+}
 
+<<<<<<< Updated upstream
 [sub_resource type="Animation" id="Animation_bhijr"]
 length = 0.001
 tracks/0/type = "value"
@@ -119,13 +136,47 @@ _data = {
 }
 
 [node name="Star" type="Node2D" unique_id=155504370]
+=======
+[sub_resource type="Animation" id="Animation_xft7j"]
+resource_name = "explode"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ExplodeStar:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 256, 256), Rect2(256, 0, 256, 256), Rect2(512, 0, 256, 256), Rect2(768, 0, 256, 256), Rect2(1024, 0, 256, 256)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y66hr"]
+_data = {
+&"RESET": SubResource("Animation_mvros"),
+&"nukeself": SubResource("Animation_xft7j")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o68gg"]
+radius = 113.137085
+
+[node name="Star" type="Node2D" unique_id=155504370 node_paths=PackedStringArray("explode_ani")]
+>>>>>>> Stashed changes
 script = ExtResource("1_xft7j")
+explode_ani = NodePath("AnimationPlayer")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1881147731]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=787358514]
+libraries/ = SubResource("AnimationLibrary_y66hr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=341485243]
-shape = SubResource("CircleShape2D_8t0bl")
+[node name="ExplodeStar" type="Sprite2D" parent="." unique_id=289631466]
+texture = ExtResource("2_y66hr")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 256)
 
+<<<<<<< Updated upstream
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=217360956]
 libraries/ = SubResource("AnimationLibrary_etob7")
 
@@ -151,3 +202,10 @@ visible = false
 position = Vector2(-26, -100.000015)
 scale = Vector2(2.6835938, 2.7265625)
 texture = ExtResource("5_7vje4")
+=======
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=997808010]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1267325879]
+shape = SubResource("CircleShape2D_o68gg")
+>>>>>>> Stashed changes

@@ -76,6 +76,7 @@ region_rect = Rect2(0, 0, 256, 256)
 libraries/ = SubResource("AnimationLibrary_y5l04")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1592434852]
+zoom = Vector2(0.1, 0.1)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1276052295]
 visible = false
