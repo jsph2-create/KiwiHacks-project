@@ -24,9 +24,9 @@ func _process(delta: float) -> void:
 func spawn(item, range = spawning_range, origin = Vector2(0,0) ) -> void:
 	var spawn_item = item.instantiate()
 	rng.randomize()
-	var rand_pos_x = rng.rand_range(-range, range)
+	var rand_pos_x = rng.randi_range(-range, range)
 	rng.randomize()
-	var rand_pos_y = rng.rand_range(-range, range)
+	var rand_pos_y = rng.randi_range(-range, range)
 
 	spawn_item.global_position.x = Vector2(origin).x + rand_pos_x
 

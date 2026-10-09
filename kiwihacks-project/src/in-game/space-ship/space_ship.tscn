@@ -3,6 +3,44 @@
 [ext_resource type="Script" uid="uid://b2ttv6d2isxnl" path="res://src/in-game/space-ship/space_ship.gd" id="1_6nhxk"]
 [ext_resource type="Texture2D" uid="uid://c4ooakyh8teex" path="res://src/in-game/space-ship/spaceship.png" id="2_1x36f"]
 
+[sub_resource type="Animation" id="Animation_y5l04"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 256, 256)]
+}
+
+[sub_resource type="Animation" id="Animation_1x36f"]
+resource_name = "move"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(0, 0, 256, 256), Rect2(256, 0, 256, 256), Rect2(512, 0, 256, 256), Rect2(768, 0, 256, 256)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y5l04"]
+_data = {
+&"RESET": SubResource("Animation_y5l04"),
+&"move": SubResource("Animation_1x36f")
+}
+
 [node name="SpaceShip" type="CharacterBody2D" unique_id=1008286286]
 motion_mode = 1
 script = ExtResource("1_6nhxk")
@@ -12,8 +50,15 @@ texture_filter = 1
 rotation = 4.712389
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_1x36f")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 256)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Spaceship" unique_id=1676105474]
+libraries/ = SubResource("AnimationLibrary_y5l04")
+autoplay = &"move"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1592434852]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1276052295]
-polygon = PackedVector2Array(32, -1, 32, -30, -26, -30, -32, -2, -32, 1, -24, 29, 32, 29)
+visible = false
+polygon = PackedVector2Array(32, -1, 22, -30, -26, -30, -32, -2, -32, 1, -24, 29, 22, 29, 32, 0)
