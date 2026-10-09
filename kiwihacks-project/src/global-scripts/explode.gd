@@ -6,3 +6,4 @@ func explode(obj_global_pos) -> void:
 	var expos = exploder.instantiate()
 	expos.global_position = obj_global_pos
 	get_tree().current_scene.add_child(expos)
+	get_tree().current_scene.add_child(expos)

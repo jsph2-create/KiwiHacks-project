@@ -84,4 +84,4 @@ scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(32, -1, 22, -30, -26, -30, -32, -2, -32, 1, -24, 29, 22, 29, 32, 0)
 
 [node name="LaserGun" parent="." unique_id=1076174354 instance=ExtResource("3_diuti")]
-position = Vector2(5, 18)
+position = Vector2(4, 20)
