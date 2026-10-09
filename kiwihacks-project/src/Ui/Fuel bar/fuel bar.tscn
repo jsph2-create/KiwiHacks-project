@@ -11,12 +11,6 @@ var fuel: float = 100.0:
 	set(value):
 		fuel = clamp(value, 0, max_fuel)
 		fuel_changed.emit(fuel)
-
-func use_fuel(amount: float) -> void:
-	fuel -= amount
-
-func add_fuel(amount: float) -> void:
-	fuel += amount
 "
 
 [node name="FuelBar" type="Node2D" unique_id=1359010888]
