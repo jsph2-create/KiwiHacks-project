@@ -1,9 +1,122 @@
 [gd_scene format=3 uid="uid://dau76aukoc42f"]
 
 [ext_resource type="Script" uid="uid://nakwx517jdhs" path="res://src/in-game/star/star.gd" id="1_xft7j"]
+[ext_resource type="Texture2D" uid="uid://eo24ofx5s80h" path="res://src/in-game/star/untitled-pixel-art@4x (3).png" id="2_citqq"]
+[ext_resource type="Texture2D" uid="uid://g1v8a7xsbe2d" path="res://src/in-game/star/untitled-pixel-art@4x (8).png" id="3_vvwei"]
+[ext_resource type="Texture2D" uid="uid://dgef3y16lqu7" path="res://src/in-game/star/untitled-pixel-art@4x (9).png" id="4_umwbs"]
+[ext_resource type="Texture2D" uid="uid://bv2i6dav0hphi" path="res://src/in-game/star/untitled-pixel-art@4x (10).png" id="5_7vje4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8t0bl"]
 radius = 112.28535
+
+[sub_resource type="Animation" id="Animation_bhijr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UntitledPixelArt_4x(3):visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UntitledPixelArt_4x(8):visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UntitledPixelArt_4x(9):visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UntitledPixelArt_4x(10):visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_exc8x"]
+resource_name = "explode"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UntitledPixelArt_4x(3):visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UntitledPixelArt_4x(8):visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UntitledPixelArt_4x(9):visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UntitledPixelArt_4x(10):visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_etob7"]
+_data = {
+&"RESET": SubResource("Animation_bhijr"),
+&"explode": SubResource("Animation_exc8x")
+}
 
 [node name="Star" type="Node2D" unique_id=155504370]
 script = ExtResource("1_xft7j")
@@ -13,5 +126,28 @@ script = ExtResource("1_xft7j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=341485243]
 shape = SubResource("CircleShape2D_8t0bl")
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1346517199]
-polygon = PackedVector2Array(-128, 0, 0, 128, 128, 0, 0, -128)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=217360956]
+libraries/ = SubResource("AnimationLibrary_etob7")
+
+[node name="UntitledPixelArt_4x(3)" type="Sprite2D" parent="." unique_id=1890654195]
+visible = false
+position = Vector2(-2, 90)
+texture = ExtResource("2_citqq")
+
+[node name="UntitledPixelArt_4x(8)" type="Sprite2D" parent="." unique_id=946584086]
+visible = false
+position = Vector2(-10.999985, -24)
+scale = Vector2(2.8710938, 3.1835938)
+texture = ExtResource("3_vvwei")
+
+[node name="UntitledPixelArt_4x(9)" type="Sprite2D" parent="." unique_id=1356261019]
+visible = false
+position = Vector2(-8.000061, 6)
+scale = Vector2(3.2070313, 3.015625)
+texture = ExtResource("4_umwbs")
+
+[node name="UntitledPixelArt_4x(10)" type="Sprite2D" parent="." unique_id=640890847]
+visible = false
+position = Vector2(-26, -100.000015)
+scale = Vector2(2.6835938, 2.7265625)
+texture = ExtResource("5_7vje4")
