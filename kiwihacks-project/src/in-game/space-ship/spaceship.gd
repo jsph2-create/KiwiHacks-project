@@ -1,4 +1,6 @@
 extends CharacterBody2D
+var type = "ship"
+
 
 @export_category("ship stats")
 @export var default_speed_max := 500.0

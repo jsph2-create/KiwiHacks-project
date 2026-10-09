@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckyqw33aykq7a"
-path="res://.godot/imported/untitled-pixel-art@4x.png-fb63326067e6df1ae57d15d3f20ce312.ctex"
+uid="uid://gvrnm5sjyw2t"
+path="res://.godot/imported/untitled-pixel-art@4x (5).png-772f7dc8f150fc7878d7f6ed0a650a09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/in-game/space-ship/untitled-pixel-art@4x.png"
-dest_files=["res://.godot/imported/untitled-pixel-art@4x.png-fb63326067e6df1ae57d15d3f20ce312.ctex"]
+source_file="res://src/in-game/star/untitled-pixel-art@4x (5).png"
+dest_files=["res://.godot/imported/untitled-pixel-art@4x (5).png-772f7dc8f150fc7878d7f6ed0a650a09.ctex"]
 
 [params]
 
