@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfgjdtp8x0qnt"
+path="res://.godot/imported/Lazer beam.mp3-c9879e9125be4b22da0df39ae603947e.mp3str"
+
+[deps]
+
+source_file="res://src/in-game/Sound effects/Lazer beam.mp3"
+dest_files=["res://.godot/imported/Lazer beam.mp3-c9879e9125be4b22da0df39ae603947e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
