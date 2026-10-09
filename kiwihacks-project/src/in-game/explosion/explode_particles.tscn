@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b2ih44b2xcht2"]
+
+[ext_resource type="Texture2D" uid="uid://cqecc12bq2ux" path="res://icon.svg" id="1_e05er"]
+[ext_resource type="Script" uid="uid://dbi623r54pvqa" path="res://src/in-game/explosion/explode_particles.gd" id="2_sxg17"]
+
+[sub_resource type="Curve" id="Curve_e05er"]
+_data = [Vector2(0.0042372867, 0), 0.0, 0.0, 0, 0, Vector2(0.04373757, 0.9962547), 0.0, 0.0, 0, 0, Vector2(0.10337971, 0.98501873), -0.5973518, -0.5973518, 0, 0, Vector2(0.25974023, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_sxg17"]
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.9666667, 0, 1)
+
+[node name="ExplodeParticles" type="CPUParticles2D" unique_id=516408362]
+emitting = false
+amount = 48
+texture = ExtResource("1_e05er")
+lifetime = 4.3999999999999995
+one_shot = true
+explosiveness = 0.9
+randomness = 0.4
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 600.0
+initial_velocity_max = 1200.0
+linear_accel_min = -2000.0
+linear_accel_max = -200.0
+scale_amount_curve = SubResource("Curve_e05er")
+color_initial_ramp = SubResource("Gradient_sxg17")
+script = ExtResource("2_sxg17")
