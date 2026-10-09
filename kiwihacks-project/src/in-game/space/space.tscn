@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://y8u53mfxxpxl"]
+
+[ext_resource type="Script" uid="uid://c7uqsbul4gupv" path="res://src/in-game/space/space.gd" id="1_hg7dk"]
+[ext_resource type="PackedScene" uid="uid://dggxvde21rke3" path="res://src/in-game/background/background.tscn" id="2_m7po1"]
+[ext_resource type="PackedScene" uid="uid://c1x44g2wtxkis" path="res://src/in-game/space-ship/space_ship.tscn" id="3_m7po1"]
+
+[node name="Space" type="Node2D" unique_id=1277939443]
+script = ExtResource("1_hg7dk")
+background = ExtResource("2_m7po1")
+player = ExtResource("3_m7po1")

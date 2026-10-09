@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1x44g2wtxkis"]
+
+[ext_resource type="Script" uid="uid://b2ttv6d2isxnl" path="res://src/in-game/space-ship/space_ship.gd" id="1_6nhxk"]
+
+[node name="SpaceShip" type="CharacterBody2D" unique_id=1008286286]
+motion_mode = 1
+script = ExtResource("1_6nhxk")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1100132364]
+color = Color(0, 1, 1, 1)
+polygon = PackedVector2Array(0, -56, -32, 0, 0, 16, 32, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1178460808]
+visible = false
+polygon = PackedVector2Array(0, -56, -32, 0, 0, 16, 32, 0, 0, -56)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1592434852]
