@@ -13,12 +13,12 @@ func _ready() -> void:
 	get_tree().current_scene.add_child(background_loader)
 	var spaceship_loader = player.instantiate()
 	get_tree().current_scene.add_child(spaceship_loader)
-	spawn(star)
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	spawn(star)
 
 
 func spawn(item, range = spawning_range, origin = Vector2(0,0) ) -> void:

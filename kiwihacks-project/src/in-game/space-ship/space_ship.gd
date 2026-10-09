@@ -5,6 +5,9 @@ extends CharacterBody2D
 @export var default_accelleration := 1000.0
 @export var default_decelleration := 1000.0
 
+@export_category("other exports")
+@export var ani : AnimationPlayer
+
 var speed_max = default_speed_max
 var vec_direction
 var last_location
@@ -18,8 +21,11 @@ func _physics_process(delta: float) -> void:
 
 	if vec_direction == Vector2.ZERO:
 		velocity = velocity.move_toward(Vector2.ZERO, default_decelleration * delta)
+		ani.stop()
+		ani.play("off")
 	else: 
 		velocity = velocity.move_toward(vec_direction * speed_max, default_accelleration * delta)
+		ani.play("move")
 
 	#turn to mouse
 	var target_angle = (get_global_mouse_position() - global_position).angle()
