@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dbi623r54pvqa" path="res://src/in-game/explosion/explode_particles.gd" id="2_sxg17"]
 
 [sub_resource type="Curve" id="Curve_e05er"]
-_data = [Vector2(0.0042372867, 0), 0.0, 0.0, 0, 0, Vector2(0.04373757, 0.9962547), 0.0, 0.0, 0, 0, Vector2(0.10337971, 0.98501873), -0.5973518, -0.5973518, 0, 0, Vector2(0.25974023, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.0042372867, 0), 0.0, 0.0, 0, 0, Vector2(0.071186446, 0.16326535), 0.0, 0.0, 0, 0, Vector2(0.15593222, 0.19047618), -0.5973518, -0.5973518, 0, 0, Vector2(0.25974023, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
 [sub_resource type="Gradient" id="Gradient_sxg17"]

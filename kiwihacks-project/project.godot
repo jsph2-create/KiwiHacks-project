@@ -17,8 +17,10 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+FuelBar="*uid://ch6omjexuy4f2"
 EventBus="*uid://uh56soraaet1"
 Explode="*uid://0tog4lrfycex"
+Explode="*uid://cxyxgnomo2xg6"
 
 [display]
 
