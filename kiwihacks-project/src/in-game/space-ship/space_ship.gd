@@ -20,12 +20,6 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(Vector2.ZERO, default_decelleration * delta)
 	else: 
 		velocity = velocity.move_toward(vec_direction * speed_max, default_accelleration * delta)
-			
-
-	
-	
-		
-	
 
 	#turn to mouse
 	var target_angle = (get_global_mouse_position() - global_position).angle()
